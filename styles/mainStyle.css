@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(220,220,220);
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+
+#container{
+    width: 1300px;
+    background-color: transparent;
+    margin: 0 auto 0 auto;	/*top right bottom left, sentrerer innholdet*/
+    padding-top: 40px;
+}
+
+nav ul, aside ul{
+    list-style-type: none;
+}
+
+.clear{
+    clear: both;
+}

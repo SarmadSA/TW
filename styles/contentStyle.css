@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+.section-tittle{
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.content{
+    margin-top: 0px;
+    box-sizing: border-box;
+    height: auto;
+    margin-bottom: 30px;
+    transition: 0.1s ease;
+    background-color: rgb(230,230,230);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0px rgba(0, 0, 0, 0.19);
+}
+
+.content:hover{
+    background-color: rgb(230,230,230);
+    cursor: pointer;
+}
+
+.article-first{
+    float: left;
+    width: 23.7%;
+    min-height: 340px;
+    margin-left: 10px;
+    padding-top: 15px;
+}
+
+.article-second{
+    float: right;
+    width: 24.05%;
+    min-height: 330px;
+    margin-right: 10px;
+    padding-top: 15px;
+}
+
+aside{
+    margin-top: 0px;
+    box-sizing: border-box;
+    height: auto;
+    margin-bottom: 30px;
+    transition: 0.1s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: right;
+    width: 25%;
+    min-height: 785px;
+    height: auto;
+    margin-right: 10px;
+    padding: 20px;
+    border-top: 2px solid #22B473;
+    background-color: rgb(230,230,230);
+}
+
+.image-container{
+    height: auto;
+    width: 98%;
+    background-color: transparent;
+    margin: 5px auto auto auto;
+}
+
+section img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.section-tittle-container{
+    padding-left: 20px;
+    padding-top: 15px;
+    height: 50px;
+    width: 72.7%;
+    background: linear-gradient(-90deg, #46996a, #58b762);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-section-tittle{
+    font-size: 150%;
+}
+
+
+.image-text{
+    color: gray;
+    font-size: 80%;
+    text-align: center;
+}
+
+.element-tittle-container{
+    box-sizing: border-box;
+    height: 60px;
+    width: 80%;
+    background-color: #5bc171;
+    color: white;
+    padding-top: 17px;
+    text-align: left;
+}
+
+.section-to-tittle-container{
+    box-sizing: border-box;
+    float: left;
+    padding-top: 15px;
+    padding-left: 10px;
+    height: 70px;
+    width: 100%;
+    background-color: transparent;
+    color:#505050;
+}
+
+.section-to-tittle-container:hover{
+    cursor: pointer;
+    color: green;
+}
+
+.aside-content{
+    font: 500 1em courier;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: -1px;
+    background-color: transparent;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.aside-content img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.aside-content:hover{
+    cursor: pointer;
+    border-bottom: 2px solid green;
+}

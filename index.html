@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="nb">
+    <head>
+        <meta charset="utf-8">
+        <title>Sarmad Abbas</title>
+        <link rel="stylesheet" type="text/css" href="styles/mainStyle.css">
+        <link rel="stylesheet" type="text/css" href="styles/headerStyle.css">
+        <link rel="stylesheet" type="text/css" href="styles/sliderStyle.css">
+        <link rel="stylesheet" type="text/css" href="styles/navigationMenueStyle.css">
+        <link rel="stylesheet" type="text/css" href="styles/searchBarStyle.css">
+        <link rel="stylesheet" type="text/css" href="styles/contentStyle.css">
+        <link rel="stylesheet" type="text/css" href="styles/productProfileStyle.css">
+        <link rel="stylesheet" type="text/css" href="styles/footerStyles.css">
+    </head>
+    <body>
+
+        <header>
+            <h1 class="tech-header">Tech</h1><h1 class="wizzle-header">Wizzle</h1>
+        </header>
+        <!--Navigasjon menyet-->
+        <nav id="navigation-menu-container">
+            <ul id="navigationUL">
+
+                <!--Navigasjonslisten-->
+                <li class="navigation-list"><a href="index.html">Hjem</a></li>
+                <li class="dropdown navigation-list">
+                    <a href="artikler.html">Artikler</a>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="vitenskapeligArtikler.html">Vitenskapelig artikler</a>
+                        <a href="andreArtikler.html">Andre artikler</a>
+                    </div>
+                </li>
+                <li class="navigation-list"><a href="om.html">Om nettsiden</a></li> 
+                <li class="navigation-list"><a href="kontakt-meg.html">Kontakt meg</a></li> 
+                <!--Slutten av navigasjons listen-->
+
+                <!--Søke-feltet og søke-knappen-->
+                <li>
+                    <form class="search-form">
+                        <input type="text" class="search" id="search" placeholder="Søk...">
+                        <button type="button" id="search_button">
+                            <svg viewBox="0 0 36.02 40.02">
+                            <defs>
+                            <symbol id="search_symbol" viewBox="0 0 32.87 36.83">
+                                <circle class="cls-1" cx="12.5" cy="12.5" r="10"/>
+                                <line class="cls-1" x1="20.53" y1="19.50" x2="32.5" y2="29.5"/>
+                            </symbol>
+                            </defs>
+                            <use width="20" height="20" transform="translate(6.5 8.5) scale(1.2 1.2)" xlink:href="#search_symbol"/>
+                            </svg>	
+                        </button>
+                    </form>
+                </li>
+                <!--Slutten av søk-feltet og søke-knappen-->
+            </ul>
+        </nav>	
+
+        <main id="container">   
+            <!--innhold som ligger på høyre siden-->				
+            <aside>
+                <h2>Build of the week</h2>
+                <br>
+                <!--
+                <div class="aside-content">
+                    <h3>GTX 1070 VS GTX 1080ti in GTA V max and low settings</h3>
+                    <figure class="image-container">
+                        <img src="images/sub.png" alt="trondheim"/>
+                    </figure>
+                </div>
+                <div class="aside-content">
+                    <h3>GTX 1070 VS GTX 1080ti in GTA V max and low settings</h3>
+                    <figure class="image-container">
+                        <img src="images/trondheim.png" alt="trondheim"/>
+                    </figure>
+                </div>
+                -->
+            </aside>
+
+            <section>
+                <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                <div class="section-tittle-container">
+                    <h2 class="top-section-tittle">Siste Artikler:</h2>
+                </div>
+                <!--This is the header-->
+                <div class="headerDiv nestedDivs" id="headerDiv">
+
+                    <div class="sliderDiv">
+
+                        <!--The slide images and the slide texts-->			
+                        <div class="slides fadeOut">
+                            <div class="slideText">Enter slide one text</div>
+                            <img class="slideImage" src="images/slideOne2.jpg" alt="">
+                        </div>
+
+                        <div class="slides fadeOut">
+                            <div class="slideText">Enter slide two text</div>
+                            <img class="slideImage" src="images/slideTwo.jpg" alt="">
+                        </div>
+
+                        <div class="slides fadeOut">
+                            <div class="slideText">Enter slide one text this is the GTX 2080 TI the best ever in the marked currently</div>
+                            <img class="slideImage" src="images/tech.jpg" alt="">
+                        </div>
+
+                        <!--The buttons and the icons-->			
+                        <div class="previewsSlide">						
+                            <button type="button" class="slideButton" onclick="prevSlide()">
+                                <svg class="buttonIcon">
+                                <defs>
+                                <symbol id="buttonIconLeft" viewBox="0 0 32 32">
+                                    <path d="M20.914 9.914l-2.829-2.829-8.914 8.914 8.914 8.914 2.828-2.828-6.086-6.086z"></path>
+                                </symbol>
+                                </defs>
+                                <use xlink:href="#buttonIconLeft"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="nextSlide">
+                            <button type="button" class="slideButton" onclick="nextSlide()">
+                                <svg class="buttonIcon">
+                                <defs>
+                                <symbol id="buttonIconRight" viewBox="0 0 32 32">
+                                    <path d="M11.086 22.086l2.829 2.829 8.914-8.914-8.914-8.914-2.828 2.828 6.086 6.086z"></path>
+                                </symbol>
+                                </defs>
+                                <use xlink:href="#buttonIconRight"></use>
+                                </svg>
+                            </button>				
+                        </div>
+
+                        <!--The bubbles/dots/image number indicator-->
+                        <div class="bubbleContainer" style="text-align:center">
+                            <span class="bubble" onclick="displaySelectedSlide(1)"></span> 
+                            <span class="bubble" onclick="displaySelectedSlide(2)"></span> 
+                            <span class="bubble" onclick="displaySelectedSlide(3)"></span> 
+                        </div>
+
+                    </div>
+                    <script src="script/sliderScript.js"></script>
+
+                </div>
+
+
+                <!--This is the last section-->
+                <!--Artikkel 1-->				
+                <article class="content article-first"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
+                    </div>
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/trondheim.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+
+                <!--Artikkel 1-->
+                <article class="content article-first"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
+                    </div>
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/cpu_wars.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <!--Artikkel 1-->
+                <article class="content article-first"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/trondheim.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+
+
+                <!--Product profiles section-->
+                <!--Artikkel 1-->
+                <h2 class="section-to-tittle-container">Featured Product Profiles</h2>
+                <article class="product-profile"> 
+                    <!--Bilde beholder-->
+                    <div class="profile-header-container">
+                        <figure class="profile-image-container">
+                            <img src="images/trondheim.png" alt="trondheim"/>
+                        </figure> 
+                        <div class="product-info-container">
+                            <h3 class="profile-tittle">MSI GTX 1060 GAMING X</h3>
+                            <p> Date of release: 15.05.2016 </p>
+                            <p> AVG price: 230 USD</p>
+                            <p>Product link</p>
+                            <p class="view-profile">View full profile</p>
+                        </div>
+                    </div>
+                    <h4 class="profile-content-tittle">Preformance in games:</h4>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/gtav.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Grand theft auto V</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>70+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/bf1.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Battlefiled 1</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>90+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/csgo.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Counter Strike GO</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>220+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="more-gameresults">More</p>
+                    <!-- 
+                    <div class="profile-view-more">
+                         <p>View Product Profile</p>
+                     </div>
+                    -->
+                </article>
+                <article class="product-profile"> 
+                    <!--Bilde beholder-->
+                    <div class="profile-header-container">
+                        <figure class="profile-image-container">
+                            <img src="images/trondheim.png" alt="trondheim"/>
+                        </figure> 
+                        <div class="product-info-container">
+                            <h3 class="profile-tittle">MSI GTX 1060 GAMING X</h3>
+                            <p> Date of release: 15.05.2016 </p>
+                            <p> AVG price: 230 USD</p>
+                            <p>Product link</p>
+                            <p class="view-profile">View full profile</p>
+                        </div>
+                    </div>
+                    <h4 class="profile-content-tittle">Preformance in games:</h4>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/gtav.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Grand theft auto V</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>70+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/bf1.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Battlefiled 1</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>90+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/csgo.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Counter Strike GO</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>220+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="more-gameresults">More</p>
+                    <!-- 
+                    <div class="profile-view-more">
+                         <p>View Product Profile</p>
+                     </div>
+                    -->
+                </article>
+                <article class="product-profile"> 
+                    <!--Bilde beholder-->
+                    <div class="profile-header-container">
+                        <figure class="profile-image-container">
+                            <img src="images/trondheim.png" alt="trondheim"/>
+                        </figure> 
+                        <div class="product-info-container">
+                            <h3 class="profile-tittle">MSI GTX 1060 GAMING X</h3>
+                            <p> Date of release: 15.05.2016 </p>
+                            <p> AVG price: 230 USD</p>
+                            <p>Product link</p>
+                            <p class="view-profile">View full profile</p>
+                        </div>
+                    </div>
+                    <h4 class="profile-content-tittle">Preformance in games:</h4>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/gtav.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Grand theft auto V</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>70+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/bf1.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Battlefiled 1</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>90+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-showcase">
+                        <figure class="game-image-container">
+                            <img src="images/csgo.png" alt="trondheim"/>
+                        </figure>
+                        <div class="game-results-container">
+                            <p class="game-results">Counter Strike GO</p>
+                            <p class="game-results">Max settings - 1080p</p>
+                        </div>
+                        <div class="hexagon">
+                            <div class="hexagon-score">
+                                <p>220+</p>
+                                <p>FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="more-gameresults">More</p>
+                    <!-- 
+                    <div class="profile-view-more">
+                         <p>View Product Profile</p>
+                     </div>
+                    -->
+                </article>
+
+
+                <h2 class="section-to-tittle-container">CPU comparisons</h2>
+                <!--Artikkel 1-->
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/trondheim.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <!--Artikkel 1-->
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/trondheim.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/cpu.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/cpu.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <!--This is the last section-->
+
+                <h2 class="section-to-tittle-container">Produckt profiles</h2>
+                <!--Artikkel 1-->
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">GTX 1060</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/trondheim.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <!--Artikkel 1-->
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">ASUSE GTX 1080 STRIX</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/trondheim.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">MSI GTX 1060 torbu</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/cpu.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+                <article class="content article-second"> 
+                    <!--Tittelen øverst på siden (seksjon tittelen)-->	
+                    <div class="element-tittle-container">
+                        <h3 class="section-tittle">MSI GAMING X GTX 1060</h3>
+                    </div>
+
+                    <!--Bilde beholder-->
+                    <figure class="image-container">
+                        <img src="images/cpu.png" alt="trondheim"/>
+                    </figure> 				
+                </article>
+
+                <br class="clear"/>
+            </section>
+        </main>
+        <!--Slutten av "container"-->	
+
+        <!--Footer -->
+        <footer>
+            <!--Footer navigasjonsmeny-->
+            <nav>
+                <ul>
+                    <li><a href="kontakt-meg.html">Kontakt</a></li>
+                    <li><a href="annonser.html">Annonser</a></li>
+                    <li><a href="apper.html#">Tech Apper</a></li>
+                    <li><a href="hosting.html">Hosting løsninger</a></li>
+                </ul>
+            </nav>  
+
+            <hr>
+
+            <!--Opphavsrett og andre info-->	
+            <p> Sist oppdatert: 22.01.2018. </p>
+            <p> Nettsiden er laget av Sarmad Abbas.</p>
+            <p> Innholdet i denne nettsiden er beskyttet i henhold til norsk lov om opphavsrett (Åndsverkloven). </p>
+            <small id="copyright-text">&copy; 2018 Sarmad Abbas</small>
+        </footer> 
+    </body>
+</html>

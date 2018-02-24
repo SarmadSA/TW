@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+#headerDiv{
+    box-sizing: border-box;
+    background-color: transparent;
+    width: 73.4%;
+    height: 361px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.sliderDiv {
+    width: 99%;
+    height: 410px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5px; /*sinse the header div is 430px and .sliderDiv is 400px there will be 30px left, we divide them by 2 så we get 15px top and the rest (15px) buttom*/
+}
+
+.slides {
+    display: none;
+    height: 350px;
+    width: 100%;
+}
+
+.slideImage{
+    /*since your images are 1000 x 350, and the width of the container is 1250px the image will not go all the way to the other side, 
+images you upload should be the same size of the container, see .sliderDiv*/
+    /*if you want your images to be streached use the following:*/
+    width: 100%;
+    height:100%;
+
+    /*if you dont want your images to be streached use the following
+    max-width: 100%;
+    max-height:100%;
+    */
+}
+
+/* Next and previous buttons */
+.slideButton{
+    border-radius: 40px;   	/*border-radius: 0 3px 3px 0; use this if you want rectangle insted of sircle*/
+    border: 0px;
+    height: 40px;
+    width: 40px;
+    outline: none;
+    background-color: rgba(0,0,0,0.0); /*button is hidden when the mouse is not hovering over the container*/
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.buttonIcon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: rgba(255,255,255,0.0); /*button icon is hidden when the mouse is not hovering over the container*/
+    transition: 0.4s ease;
+}
+
+/*When hovering over the container and hovering over the button icon*/
+.sliderDiv:hover .buttonIcon:hover{
+    fill: rgba(255,255,255,1);
+    transition: 0.1s ease;
+}
+
+/*When hovering over the container and the slide button*/
+.sliderDiv:hover .slideButton:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+
+/*when hovering over the container the slide buttons and the icons will show*/
+.sliderDiv:hover .slideButton{
+    background-color: rgba(0,0,0,0.2);
+    transition: 0.5s ease;
+}
+.sliderDiv:hover .buttonIcon{
+    fill: rgba(255,255,255,0.7);
+    transition: 0.5s ease;
+}
+
+.previewsSlide, .nextSlide {
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+}
+
+.nextSlide {
+    right: 0;
+}
+
+.bubbleContainer{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+}
+
+/* Slider text */
+.slideText {
+    background-color: rgba(0,0,0,0.15);
+    color: #f2f2f2; 						/*Text color*/
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    position: absolute;
+    max-width: 40%;
+    max-height: 40%;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+/* The bubbles/dots */
+.bubble {
+    border: 1px solid rgba(255,255,255,0.80);
+    background-color:transparent;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.4s ease;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    border-radius: 50%;
+}
+
+.active, .bubble:hover {
+    background-color: rgba(255,255,255,0.80);
+}
+
+/* Fadeout animation */
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fadeOut;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: .5} /*from*/
+    100% {opacity: 1} /*to*/
+}
+
+@keyframes fadeOut {
+    0% {opacity: .5} 
+    100% {opacity: 1}
+}

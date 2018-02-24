@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+footer{
+    background-color: black;
+    height: 230px;
+    border-top: 4px solid #219648;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer nav{
+    padding: 10px 0px;
+}
+
+footer li{
+    margin-top: 5px;
+}
+
+footer li a{
+    color: rgba(255,255,255,0.80);
+    text-decoration: none;
+    transition: 0.2s ease;
+    font: 500 1em courier;
+    text-transform: uppercase;
+}
+
+footer li a:hover{
+    color: rgba(55,220,122,1.00);
+}
+
+footer hr{
+    width: 50%;
+    margin: 10px auto;
+}
+
+footer p, #copyright-text{
+    font-size: 80%;
+    font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    color: rgba(255,255,255,0.60);
+}

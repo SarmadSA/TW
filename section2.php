@@ -1,32 +1,39 @@
-<article class="product-profile"> 
-	<!--Bilde beholder-->
-	<div class="profile-header-container">
-		<figure class="profile-image-container">
-			<img src="images/trondheim.png" alt="trondheim"/>
-		</figure> 
-		<div class="product-info-container">
-			<h3 class="profile-tittle">MSI GTX 1060 GAMING X</h3>
-			<p> Date of release: 15.05.2016 </p>
-			<p> AVG price: 230 USD</p>
-			<p>Product link</p>
-			<p class="view-profile">View full profile</p>
-		</div>
-	</div>
-	<h4 class="profile-content-tittle">Preformance in games:</h4>
-	<?php
-		$numberOfGameTests = 3;
+<?php
+	$numberOfElements = 3;
+	$directory = "images/";
+	$priceArray = [230,100,330];
+	$productReleaseDate = "15.05.2016";
+	$productsNames = ["MSI GTX 1060 GAMING X","ASUS GAMING GTX 1070","MSI GTX 1060 GAMING X"];
+	$productImageArray = ["trondheim.png","trondheim.png","trondheim.png"];
+	
+	for($j = 0; $j< $numberOfElements; $j++){
+		echo "<article class=\"product-profile\">"; 
+		echo "<div class=\"profile-header-container\">";
+		echo " <figure class=\"profile-image-container\">";
+		echo "<img src=\"" . $directory . $productImageArray[$j] ."\" alt=\"trondheim\"/>"; 
+		echo "</figure>";
+		echo "<div class=\"product-info-container\">";
+		echo "<h3 class=\"profile-tittle\">". $productsNames[$j] . "</h3>";
+		echo "<p> Date of release: " . $productReleaseDate . " </p>";
+		echo "<p> AVG price: " . $priceArray[$j] . " USD</p>";
+		echo "<p>Product link</p>";
+		echo "<p class=\"view-profile\">View full profile</p>";
+		echo "</div>";
+		echo "</div>";
+		echo "<h4 class=\"profile-content-tittle\">Preformance in games:</h4>";
+
+		$numberOfDisplayedGameTests = 3;
 		$gameSettings = "Max settings - 1080p";
 		$gameNames = ["Grand theft auto V", "Counter-Strike GO", "Battlefield 1"];
 		$avrageFpsArray = [70, 100, 90];
 		$imagesArray = ["gtav.png","csgo.png","bf1.png"];
-		$imageAlts = ["","",""];
-		$directory = "images/";	
-	
-		for($i = 0; $i< $numberOfGameTests; $i++){
+		$gameImageAlts = ["","",""];	
+
+		for($i = 0; $i< $numberOfDisplayedGameTests; $i++){
 			echo "<div class=\"game-showcase\">";
 			//figure
 			echo "<figure class=\"game-image-container\">";
-			echo "<img src=\"" . $directory . $imagesArray[$i] . "\" alt=\"trondheim\"/>";
+			echo "<img src=\"" . $directory . $imagesArray[$i] . "\" alt=\"" . $gameImageAlts[$i]. "\"/>";
 			echo "</figure>";
 			//div 1
 			echo "<div class=\"game-results-container\">";
@@ -42,6 +49,7 @@
 			echo "</div>";
 			echo "</div>";
 		}
-	?>
-	<p class="more-gameresults">More</p>
-</article>
+		echo "<p class=\"more-gameresults\">More</p>";
+		echo "</article>";	
+	}
+?>

@@ -11,19 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="styles/contentStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/productProfileStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/footerStyles.css">
-
-	<!--Including css files-->
-	<?php
-	/*
-	$styleSheets = ["mainStyle.css","headerStyle.css","sliderStyle.css",
-	"sliderStyle.css","navigationMenueStyle.css","searchBarStyle.css",
-	"contentStyle.css","productProfileStyle.css","footerStyles.css"];
-
-	foreach($styleSheets as $sheet){
-	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/" . $sheet . "\">";
-	}
-	*/
-	?>
 </head>
 <body>
 	<?php include 'header.php';?>
@@ -44,26 +31,17 @@
 
 		<!--Product profiles section-->
 		<section>
+			<h2 class="section-to-tittle-container">Featured Product Profiles</h2>
 			<?php include 'section2.php';?>
 		</section>
 		
+		<!--add section name here-->
 		<section>
 			<h2 class="section-to-tittle-container">CPU comparisons</h2>
-			<!--Artikkel 1-->
-			<article class="content article-second"> 
-				<!--Tittelen øverst på siden (seksjon tittelen)-->	
-				<div class="element-tittle-container">
-					<h3 class="section-tittle">GTX 1060 vs GTX 1070</h3>
-				</div>
-				<!--Bilde beholder-->
-				<figure class="image-container">
-					<img src="images/trondheim.png" alt="trondheim"/>
-				</figure> 				
-			</article>
+			<?php include 'section3.php'?>
 		</section>
 		
 		<br class="clear"/>
-		
 	</main>
 	
 	<!--Slutten av "container"-->	

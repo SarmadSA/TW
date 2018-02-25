@@ -1,4 +1,3 @@
-<h2 class="section-to-tittle-container">Featured Product Profiles</h2>
 <article class="product-profile"> 
 	<!--Bilde beholder-->
 	<div class="profile-header-container">
@@ -14,50 +13,35 @@
 		</div>
 	</div>
 	<h4 class="profile-content-tittle">Preformance in games:</h4>
-	<div class="game-showcase">
-		<figure class="game-image-container">
-			<img src="images/gtav.png" alt="trondheim"/>
-		</figure>
-		<div class="game-results-container">
-			<p class="game-results">Grand theft auto V</p>
-			<p class="game-results">Max settings - 1080p</p>
-		</div>
-		<div class="hexagon">
-			<div class="hexagon-score">
-				<p>70+</p>
-				<p>FPS</p>
-			</div>
-		</div>
-	</div>
-	<div class="game-showcase">
-		<figure class="game-image-container">
-			<img src="images/bf1.png" alt="trondheim"/>
-		</figure>
-		<div class="game-results-container">
-			<p class="game-results">Battlefiled 1</p>
-			<p class="game-results">Max settings - 1080p</p>
-		</div>
-		<div class="hexagon">
-			<div class="hexagon-score">
-				<p>90+</p>
-				<p>FPS</p>
-			</div>
-		</div>
-	</div>
-	<div class="game-showcase">
-		<figure class="game-image-container">
-			<img src="images/csgo.png" alt="trondheim"/>
-		</figure>
-		<div class="game-results-container">
-			<p class="game-results">Counter Strike GO</p>
-			<p class="game-results">Max settings - 1080p</p>
-		</div>
-		<div class="hexagon">
-			<div class="hexagon-score">
-				<p>220+</p>
-				<p>FPS</p>
-			</div>
-		</div>
-	</div>
+	<?php
+		$numberOfGameTests = 3;
+		$gameSettings = "Max settings - 1080p";
+		$gameNames = ["Grand theft auto V", "Counter-Strike GO", "Battlefield 1"];
+		$avrageFpsArray = [70, 100, 90];
+		$imagesArray = ["gtav.png","csgo.png","bf1.png"];
+		$imageAlts = ["","",""];
+		$directory = "images/";	
+	
+		for($i = 0; $i< $numberOfGameTests; $i++){
+			echo "<div class=\"game-showcase\">";
+			//figure
+			echo "<figure class=\"game-image-container\">";
+			echo "<img src=\"" . $directory . $imagesArray[$i] . "\" alt=\"trondheim\"/>";
+			echo "</figure>";
+			//div 1
+			echo "<div class=\"game-results-container\">";
+			echo "<p class=\"game-results\">" . $gameNames[$i] . "</p>";
+			echo "<p class=\"game-results\">" . $gameSettings . "</p>";
+			echo "</div>";
+			//div 2
+			echo "<div class=\"hexagon\">";
+			echo "<div class=\"hexagon-score\">";
+			echo "<p>" . $avrageFpsArray[$i] . "+</p>";
+			echo "<p>FPS</p>";
+			echo "</div>";
+			echo "</div>";
+			echo "</div>";
+		}
+	?>
 	<p class="more-gameresults">More</p>
 </article>

@@ -49,7 +49,9 @@
 			echo "</div>";
 			echo "</div>";
 		}
-		echo "<p class=\"more-gameresults\">More</p>";
+		echo "<div class=\"more-gameresults\">";
+		echo "<p>More</p>";
+		echo "</div>";
 		echo "</article>";	
 	}
 ?>

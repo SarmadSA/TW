@@ -79,3 +79,13 @@ label {
 	outline: none !important;
 	box-shadow: 0 0 2pt 0.3pt rgba(0,149,46,1.00);
 }
+
+.successfull-submit{
+	color: rgba(0,149,46,1.00);
+	font-size: 110%;
+}
+
+.Faild-submit{
+	color:red;
+	font-size: 110%;
+}

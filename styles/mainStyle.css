@@ -12,6 +12,7 @@ body{
 
 #container{
     width: 1300px;
+	min-height: 500px;
     background-color: transparent;
     margin: 0 auto 0 auto;	/*top right bottom left, sentrerer innholdet*/
     padding-top: 40px;

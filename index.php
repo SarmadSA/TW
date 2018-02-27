@@ -13,8 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="styles/footerStyles.css">
 </head>
 <body>
-	<?php include 'header.php';?>
-	<?php include 'navigationMenu.php';?>
+	<?php include 'templates/header.php';?>
+	<?php include 'templates/navigationMenu.php';?>
 	<main id="container">   
 		<aside>
 			<h2>Build of the week</h2>
@@ -25,7 +25,7 @@
 			<div class="section-tittle-container">
 				<h2 class="top-section-tittle">Siste Artikler:</h2>
 			</div>
-			<?php include 'slider.php';?>
+			<?php include 'templates/slider.php';?>
 			<?php include 'section1.php';?>
 		</section>
 
@@ -45,7 +45,7 @@
 	</main>
 	
 	<!--Slutten av "container"-->	
-	<?php include 'footer.php';?>
+	<?php include 'templates/footer.php';?>
 	
 </body>
 </html>

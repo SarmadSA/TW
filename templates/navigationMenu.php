@@ -1,7 +1,7 @@
 <nav id="navigation-menu-container">
 	<ul id="navigationUL">
-		<!--Navigasjonslisten-->
-		<li class="navigation-list"><a href="index.html">Hjem</a></li>
+		<!--Navigationlist-->
+		<li class="navigation-list"><a href="../index.php">Hjem</a></li>
 		<li class="dropdown navigation-list">
 			<a href="artikler.html">Artikler</a>
 			<div class="dropdown-content" id="myDropdown">
@@ -10,10 +10,10 @@
 			</div>
 		</li>
 		<li class="navigation-list"><a href="om.html">Om nettsiden</a></li> 
-		<li class="navigation-list"><a href="kontakt-meg.html">Kontakt meg</a></li> 
-		<!--Slutten av navigasjons listen-->
+		<li class="navigation-list"><a href="../techWizzle/pages/contact.php">Contact us</a></li> 
+		<!--End of navigationlist-->
 
-		<!--Søke-feltet og søke-knappen-->
+		<!--Searchfield and searchbutton-->
 		<li>
 			<form class="search-form">
 				<input type="text" class="search" id="search" placeholder="Søk...">
@@ -30,6 +30,6 @@
 				</button>
 			</form>
 		</li>
-		<!--Slutten av søk-feltet og søke-knappen-->
+		<!--End of av searchfield and searchbutton-->
 	</ul>
 </nav>	

@@ -57,7 +57,7 @@ label {
 }
 
 .submit-button {
-	transition: 0.1s ease;
+	transition: 0.4s ease;
 	box-sizing: border-box;
 	height: 50px;
 	width: 100px;
@@ -72,9 +72,8 @@ label {
 }
 
 .submit-button:hover{
-	background-color: rgba(63,172,108,1.00)
+	background-color: rgba(0,207,85,1.00);
 }
-
 
 .focus-style:focus {
 	outline: none !important;

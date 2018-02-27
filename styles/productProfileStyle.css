@@ -175,6 +175,6 @@
 }
 
 .more-gameresults:hover{
-	background-color: #059A37;
+	background-color: rgba(22,156,81,1.00); /*rgba(5,154,55,0.70);*/
     color: white;
 }

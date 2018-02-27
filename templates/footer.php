@@ -1,7 +1,7 @@
 <footer>
 	<nav>
 		<ul>
-			<li><a href="kontakt-meg.html">Kontakt</a></li>
+			<li><a href="../techWizzle/pages/contact.php">Contact us</a></li>
 			<li><a href="annonser.html">Annonser</a></li>
 			<li><a href="apper.html#">Tech Apper</a></li>
 			<li><a href="hosting.html">Hosting løsninger</a></li>

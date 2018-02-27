@@ -8,9 +8,10 @@
 body{
     background-color: rgb(220,220,220);
     font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-family: 'Nanum Gothic', sans-serif;
 }
 
-#container{
+.container{
     width: 1300px;
 	min-height: 500px;
     background-color: transparent;
@@ -24,4 +25,9 @@ nav ul, aside ul{
 
 .clear{
     clear: both;
+}
+
+.page-tittle{
+	margin: 20px 0;
+	padding-left: 20px;
 }

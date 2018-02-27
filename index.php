@@ -11,11 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="styles/contentStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/productProfileStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/footerStyles.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 </head>
 <body>
 	<?php include 'templates/header.php';?>
 	<?php include 'templates/navigationMenu.php';?>
-	<main id="container">   
+	<main class="container">   
 		<aside>
 			<h2>Build of the week</h2>
 			<br>

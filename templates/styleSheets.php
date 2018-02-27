@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 <?php
 	$directory = "../styles/";
 	$styleSheets = ["mainStyle.css","headerStyle.css","sliderStyle.css",

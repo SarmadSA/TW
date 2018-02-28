@@ -8,19 +8,6 @@
 	background-color: transparent;
 }
 
-.contact-labels{
-	box-sizing: border-box;
-    height: 40px;
-    width: 400px;
-    margin-left: 10px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    outline: none;
-    background: rgba(255,255,255, 0.3);
-    margin-bottom: 20px;	
-}
-
 .form-input {
 	font-family: 'Nanum Gothic', sans-serif;
 	box-sizing: border-box;
@@ -61,7 +48,7 @@ label {
 	box-sizing: border-box;
 	height: 50px;
 	width: 100px;
-	border-style: solid;
+	border-style: none;
 	border-radius: 5px;
     background-color: rgba(0,149,46,1.00);
 	color: white;
@@ -85,7 +72,11 @@ label {
 	font-size: 110%;
 }
 
-.Faild-submit{
-	color:red;
+.faild-submit{
+	color:rgba(255,0,0,1.00);
 	font-size: 110%;
+}
+.error-message {
+	margin-left: 10px;
+	color: red;
 }

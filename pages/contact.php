@@ -1,6 +1,54 @@
 <?php
+	$submitted = false;
+	$name = "";
+	$email = "";
+	$subject = "";
+	$message = "";
+
 	if(isset($_POST['submit'])){
-		// code (validate and send the data to a database)	
+		$submitted = true;
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$subject = $_POST['subject'];
+		$message = $_POST['message'];
+	}
+	
+	function isValidName($submittedName){
+		$isValid = false;
+		if((strlen($submittedName) > 0) && (!preg_match('/[^A-Za-z]/', $submittedName))){
+			$isValid = true;
+		}
+		return $isValid;
+	}
+	
+	function printNameErrorMessage($submittedName, $isSubmitted){
+		$errorMessage = "";
+		if($isSubmitted && (strlen($submittedName) < 1)){
+			$errorMessage = "Please enter your name!";
+		}
+		else if($isSubmitted && preg_match('/[^A-Za-z]/', $submittedName)){
+			$errorMessage = "Ivalid name! Please enter your real name.";
+		}
+		echo $errorMessage;
+	}
+	
+	function isValidEmail(){
+		//validate the email input and return true if valid, false otherwise
+		return true;
+	}
+
+	function printSubmittionMessage($submittedName, $submittedEmail, $isSubmitted){
+		$submittionMessage = "";
+			if(($isSubmitted) && (isValidName($submittedName)) && (isValidEmail())){
+				$submittionMessage = 
+				"<p class=\"successfull-submit\">Message was successfully sent " . $submittedName . "!</p>" . 
+				"<p class=\"successfull-submit\">Please check your email: " . $submittedEmail . " for verifiction code.</p>" //add more messages here
+				. "<br><br>";
+			}
+			else if(($isSubmitted) && (!isValidName($submittedName) || !isValidEmail())){
+				$submittionMessage ="<p class=\"error-message\">Faild to submit message, please try again!</p><br><br>";
+			}
+		echo $submittionMessage;
 	}
 ?>
 
@@ -20,47 +68,13 @@
 	<main class="container">
 		<div class="page-tittle"><h2>Contact us</h2></div>
 		<form class="contact-form" action="contact.php" method="post">
-			<?php
-				$submitted = false;
-				if(isset($_POST['submit'])){
-					$submitted = true;
-					$name = $_POST['name'];
-					$email = $_POST['email'];
-					$subject = $_POST['subject'];
-					$message = $_POST['message'];
-					
-					function validateName($submittedName){
-						if((strlen($submittedName) > 0) && (!preg_match('/[^A-Za-z0-9.#\\-$]/', $submittedName)) && (!is_numeric($submittedName))){
-							$isValid = true;
-						}
-						return $isValid;
-					}
-					
-					if(validateName($name)){
-						echo "<p class=\"successfull-submit\">Message was successfully sent " . $name . "!</p><br>";
-						echo "<p class=\"successfull-submit\">Please check your email adress: " . $email . " for the verification message.</p><br>";
-					}
-				}
-			?>
+			<!--Prints a message when submitting, telleing the user whether the submittion was succsessfull or faild-->
+			<?php printSubmittionMessage($name,$email,$submitted);?>
 			<label for="name">Name:</label>
 			<br>
 			<input type="text" name="name" id="name" class="form-input input-placeholder focus-style" placeholder="Your name..">
-			<span class="error-message">
-				<?php 
-					if($submitted && (strlen($name) > 0)){
-						if(preg_match('/[^A-Za-z0-9.#\\-$]/', $name) || is_numeric($name)){
-							echo "Ivalid name! Please enter your real name";
-						}
-						else{
-							$validName = true;
-							//Valid! send to database or do whatever you want 
-						}
-					}
-					else if($submitted && (strlen($name) < 1)){
-						echo "Please enter your name!";
-					}
-				?>
-			</span>
+			<!-- Prints an error message when user input is invalid-->
+			<span class="error-message"> <?php printNameErrorMessage($name, $submitted);?> </span>
 			<br>
 			<label for="email">E-mail:</label>
 			<br>

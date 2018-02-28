@@ -15,6 +15,7 @@
 	height: 50px;
 	margin-bottom: 30px;
 	margin-top: 10px;
+	margin-right: 10px;
 	padding: 0 15px;
 	background-color: rgba(255,255,255,0.8);
 	border: none;
@@ -72,11 +73,7 @@ label {
 	font-size: 110%;
 }
 
-.faild-submit{
-	color:rgba(255,0,0,1.00);
-	font-size: 110%;
-}
 .error-message {
-	margin-left: 10px;
 	color: red;
+	font-size: 110%;
 }

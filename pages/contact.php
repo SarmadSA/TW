@@ -11,41 +11,61 @@
 		$email = $_POST['email'];
 		$subject = $_POST['subject'];
 		$message = $_POST['message'];
+		
+		//Remove all spaces at the right and the left of the input.
+		$name = ltrim($name);
+		$name = rtrim($name);
+		$email = ltrim($email);
+		$email = rtrim($email);
 	}
 	
 	function isValidName($submittedName){
 		$isValid = false;
-		if((strlen($submittedName) > 0) && (!preg_match('/[^A-Za-z]/', $submittedName))){
+		if((strlen($submittedName) > 0) && (!preg_match('/[^A-Za-z ]/', $submittedName))){
 			$isValid = true;
 		}
 		return $isValid;
 	}
 	
-	function printNameErrorMessage($submittedName, $isSubmitted){
+	function printNameErrorMessage($submittedName){
 		$errorMessage = "";
-		if($isSubmitted && (strlen($submittedName) < 1)){
+		if(isset($_POST['submit']) && (strlen($submittedName) < 1)){
 			$errorMessage = "Please enter your name!";
 		}
-		else if($isSubmitted && preg_match('/[^A-Za-z]/', $submittedName)){
+		else if(isset($_POST['submit']) && preg_match('/[^A-Za-z ]/', $submittedName)){
 			$errorMessage = "Ivalid name! Please enter your real name.";
 		}
 		echo $errorMessage;
 	}
-	
-	function isValidEmail(){
-		//validate the email input and return true if valid, false otherwise
-		return true;
+
+	function printEmailErrorMessage($submittedEmail){
+		$errorMessage = "";
+		if(isset($_POST['submit']) && (strlen($submittedEmail) < 1)){
+			$errorMessage = "Please enter your Email!";
+		}
+		else if(isset($_POST['submit']) && !filter_var($submittedEmail, FILTER_VALIDATE_EMAIL)){
+			$errorMessage = "Ivalid Email! Please enter your real Email!";
+		}
+		echo $errorMessage;
 	}
 
-	function printSubmittionMessage($submittedName, $submittedEmail, $isSubmitted){
+	function isValidEmail($submittedEmail){
+		$isValid = false;
+		if((strlen($submittedEmail) > 0) && filter_var($submittedEmail, FILTER_VALIDATE_EMAIL)){
+			$isValid = true;
+		}
+		return $isValid;
+	}
+
+	function printSubmittionMessage($submittedName, $submittedEmail){
 		$submittionMessage = "";
-			if(($isSubmitted) && (isValidName($submittedName)) && (isValidEmail())){
+			if((isset($_POST['submit'])) && (isValidName($submittedName)) && (isValidEmail($submittedEmail))){
 				$submittionMessage = 
 				"<p class=\"successfull-submit\">Message was successfully sent " . $submittedName . "!</p>" . 
 				"<p class=\"successfull-submit\">Please check your email: " . $submittedEmail . " for verifiction code.</p>" //add more messages here
 				. "<br><br>";
 			}
-			else if(($isSubmitted) && (!isValidName($submittedName) || !isValidEmail())){
+			else if((isset($_POST['submit'])) && (!isValidName($submittedName) || !isValidEmail($submittedEmail))){
 				$submittionMessage ="<p class=\"error-message\">Faild to submit message, please try again!</p><br><br>";
 			}
 		echo $submittionMessage;
@@ -69,17 +89,17 @@
 		<div class="page-tittle"><h2>Contact us</h2></div>
 		<form class="contact-form" action="contact.php" method="post">
 			<!--Prints a message when submitting, telleing the user whether the submittion was succsessfull or faild-->
-			<?php printSubmittionMessage($name,$email,$submitted);?>
+			<?php printSubmittionMessage($name,$email);?>
 			<label for="name">Name:</label>
 			<br>
 			<input type="text" name="name" id="name" class="form-input input-placeholder focus-style" placeholder="Your name..">
 			<!-- Prints an error message when user input is invalid-->
-			<span class="error-message"> <?php printNameErrorMessage($name, $submitted);?> </span>
+			<span class="error-message"> <?php printNameErrorMessage($name);?> </span>
 			<br>
 			<label for="email">E-mail:</label>
 			<br>
 			<input type="text" name="email" id="email" class="form-input input-placeholder focus-style" placeholder="Your email..">
-			<span class="error-message"><?php echo "Invaild Name"?></span>
+			<span class="error-message"><?php printEmailErrorMessage($email);?></span>
 			<br>
 			<label for="subject">Subject:</label>
 			<br>

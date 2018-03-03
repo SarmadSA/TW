@@ -44,6 +44,14 @@
 		}
 		return $isValid;
 	}
+
+	function isValidMessage($submittedMessage){
+		$isValid = false;
+		if((strlen($submittedMessage) > 0) && (!preg_match('/[^A-Za-z0-9.#\\-%&$ ]/', $submittedMessage))){
+			$isValid = true;
+		}
+		return $isValid;
+	}
 	
 	function printNameError($submittedName){
 		$errorMessage = "";
@@ -75,15 +83,26 @@
 		echo $errorMessage;
 	}
 
-	function printSubmittionMessage($submittedName, $submittedEmail, $submittedSubject){
+	function printMessageError($submittedMessage){
+		$errorMessage = "";
+		if(isset($_POST['submit']) && (strlen($submittedMessage) < 1)){
+			$errorMessage = "Message can not be empty!";
+		}   
+		else if(isset($_POST['submit']) && preg_match('/[^A-Za-z0-9.#\\-%&$ ]/', $submittedMessage)){
+			$errorMessage = "Ivalid Characters in message!";
+		}
+		echo $errorMessage;
+	}
+
+	function printSubmittionMessage($submittedName, $submittedEmail, $submittedSubject, $submittedMessage){
 		$submittionMessage = "";
-			if((isset($_POST['submit'])) && (isValidName($submittedName)) && (isValidEmail($submittedEmail)) && (isValidSubject($submittedSubject))){
+			if((isset($_POST['submit'])) && (isValidName($submittedName)) && (isValidEmail($submittedEmail)) && (isValidSubject($submittedSubject)) && (isValidMessage($submittedMessage))){
 				$submittionMessage = 
 				"<p class=\"successfull-submit\">Message was successfully sent " . $submittedName . "!</p>" . 
 				"<p class=\"successfull-submit\">Please check your email: " . $submittedEmail . " for verifiction code.</p>" //add more messages here
 				. "<br><br>";
 			}
-			else if((isset($_POST['submit'])) && (!isValidName($submittedName) || !isValidEmail($submittedEmail) || !isValidSubject($submittedSubject))){
+			else if((isset($_POST['submit'])) && (!isValidName($submittedName) || !isValidEmail($submittedEmail) || !isValidSubject($submittedSubject)|| !isValidMessage($submittedMessage))){
 				$submittionMessage ="<p class=\"error-message\">Faild to submit message, please try again!</p><br><br>";
 			}
 		echo $submittionMessage;
@@ -107,7 +126,7 @@
 		<div class="page-tittle"><h2>Contact us</h2></div>
 		<form class="contact-form" action="contact.php" method="post">
 			<!--Prints a message when submitting, telleing the user whether the submittion was succsessfull or faild-->
-			<?php printSubmittionMessage($name,$email,$subject);?>
+			<?php printSubmittionMessage($name,$email,$subject,$message);?>
 			<label for="name">Name:</label>
 			<br>
 			<input type="text" name="name" id="name" class="form-input input-placeholder focus-style" placeholder="Your name..">
@@ -125,7 +144,7 @@
 			<span class="error-message"> <?php printSubjectError($subject);?></span>
 			<br>
 			<label for="message">Message:</label>
-			<span class="error-message"> * <?php //printMessageError($message);?></span>
+			<span class="error-message"> * <?php printMessageError($message);?></span>
 			<br>
 			<textarea id="message" name="message" class="contact-message input-placeholder focus-style" placeholder="Write your message.."></textarea>
 			<br>

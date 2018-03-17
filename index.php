@@ -2,7 +2,7 @@
 <html lang="nb">
 <head>
 	<meta charset="utf-8">
-	<title>Sarmad Abbas</title>
+	<title>TechWizzle</title>
 	<link rel="stylesheet" type="text/css" href="styles/mainStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/headerStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/sliderStyle.css">

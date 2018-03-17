@@ -7,10 +7,10 @@
 ?>
 		<article class="content article-second">
 			<div class="element-tittle-container">
-				<h3 class="section-tittle"><?php echo $tittles[$i] ?></h3>
+				<h3 class="section-tittle"><?php echo $tittles[$i]; ?></h3>
 			</div>
 			<figure class="image-container">
-				<img src="<?php echo $directory . $imageArray[$i] ?>" alt="trsondheim"/>
+				<img src="<?php echo $directory . $imageArray[$i]; ?>" alt="trsondheim"/>
 			</figure>
 		</article>
 <?php

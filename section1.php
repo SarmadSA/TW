@@ -5,14 +5,16 @@
 	$imageArray = ["trondheim.png","trondheim.png","trondheim.png"];
 	$imageAlt = ["","",""];
 
-	for($i = 0; $i < $numberOfElements; $i++){				
-		echo '<article class="content article-first">
+	for($i = 0; $i < $numberOfElements; $i++){
+?>		
+		<article class="content article-first">
 			<div class="element-tittle-container">
-				<h3 class="section-tittle">' . $tittleArray[$i] . '</h3>
+				<h3 class="section-tittle"><?php echo $tittleArray[$i]?></h3>
 			</div>
 			<figure class="image-container">
-				<img src= "'. $imageDirectory . $imageArray[$i] .  '" alt= "' . $imageAlt[$i] . '"/>
+				<img src= "<?php echo $imageDirectory . $imageArray[$i]?>" alt= "<?php echo $imageAlt[$i]?>"/>
 			</figure>
-		</article>';
+		</article>
+<?php	
 	}
 ?>

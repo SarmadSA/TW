@@ -7,20 +7,20 @@
 	$productImageArray = ["trondheim.png","trondheim.png","trondheim.png"];
 	
 	for($j = 0; $j< $numberOfElements; $j++){
-		echo "<article class=\"product-profile\">"; 
-		echo "<div class=\"profile-header-container\">";
-		echo " <figure class=\"profile-image-container\">";
-		echo "<img src=\"" . $directory . $productImageArray[$j] ."\" alt=\"trondheim\"/>"; 
-		echo "</figure>";
-		echo "<div class=\"product-info-container\">";
-		echo "<h3 class=\"profile-tittle\">". $productsNames[$j] . "</h3>";
-		echo "<p> Date of release: " . $productReleaseDate . " </p>";
-		echo "<p> AVG price: " . $priceArray[$j] . " USD</p>";
-		echo "<p>Product link</p>";
-		echo "<p class=\"view-profile\">View full profile</p>";
-		echo "</div>";
-		echo "</div>";
-		echo "<h4 class=\"profile-content-tittle\">Preformance in games:</h4>";
+		echo '<article class="product-profile"> 
+				<div class="profile-header-container">
+					<figure class="profile-image-container">
+						<img src="' . $directory . $productImageArray[$j] . '" alt="trondheim"/> 
+					</figure>
+					<div class="product-info-container">
+						<h3 class="profile-tittle">'. $productsNames[$j] . '</h3>
+						<p> Date of release: ' . $productReleaseDate . ' </p>
+						<p> AVG price: ' . $priceArray[$j] . ' USD</p>
+						<p>Product link</p>
+						<p class="view-profile">View full profile</p>
+					</div>
+				</div>
+				<h4 class="profile-content-tittle">Preformance in games:</h4>';
 
 		$numberOfDisplayedGameTests = 3;
 		$gameSettings = "Max settings - 1080p";

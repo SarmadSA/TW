@@ -6,15 +6,13 @@
 	$imageAlt = ["","",""];
 
 	for($i = 0; $i < $numberOfElements; $i++){				
-		echo "<article class=\"content article-first\">";
-		//Tittle 
-		echo "<div class=\"element-tittle-container\">";
-		echo "<h3 class=\"section-tittle\">" . $tittleArray[$i] . "</h3>";
-		echo "</div>";
-		//Image container
-		echo "<figure class=\"image-container\"/>";
-		echo "<img src=\"" . $imageDirectory . $imageArray[$i] . "\" alt=\"" . $imageAlt[$i] . "\"/>";
-		echo "</figure>";
-		echo "</article>";
+		echo '<article class="content article-first">
+			<div class="element-tittle-container">
+				<h3 class="section-tittle">' . $tittleArray[$i] . '</h3>
+			</div>
+			<figure class="image-container">
+				<img src= "'. $imageDirectory . $imageArray[$i] .  '" alt= "' . $imageAlt[$i] . '"/>
+			</figure>
+		</article>';
 	}
 ?>

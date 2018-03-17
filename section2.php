@@ -30,28 +30,27 @@
 		$gameImageAlts = ["","",""];	
 
 		for($i = 0; $i< $numberOfDisplayedGameTests; $i++){
-			echo "<div class=\"game-showcase\">";
-			//figure
-			echo "<figure class=\"game-image-container\">";
-			echo "<img src=\"" . $directory . $imagesArray[$i] . "\" alt=\"" . $gameImageAlts[$i]. "\"/>";
-			echo "</figure>";
-			//div 1
-			echo "<div class=\"game-results-container\">";
-			echo "<p class=\"game-results\">" . $gameNames[$i] . "</p>";
-			echo "<p class=\"game-results\">" . $gameSettings . "</p>";
-			echo "</div>";
-			//div 2
-			echo "<div class=\"hexagon\">";
-			echo "<div class=\"hexagon-score\">";
-			echo "<p>" . $avrageFpsArray[$i] . "+</p>";
-			echo "<p>FPS</p>";
-			echo "</div>";
-			echo "</div>";
-			echo "</div>";
+			echo '<div class="game-showcase">
+						<figure class="game-image-container">
+							<img src="' . $directory . $imagesArray[$i] . '" alt= "' . $gameImageAlts[$i]. '"/>
+						</figure>
+
+						<div class="game-results-container">
+							<p class="game-results">' . $gameNames[$i] . '</p>
+							<p class="game-results">' . $gameSettings . '</p>
+						</div>
+
+						<div class="hexagon">
+							<div class="hexagon-score">
+								<p>' . $avrageFpsArray[$i] . '+</p>
+								<p>FPS</p>
+							</div>
+						</div>
+					</div>';
 		}
-		echo "<div class=\"more-gameresults\">";
-		echo "<p>More</p>";
-		echo "</div>";
-		echo "</article>";	
+		echo '<div class="more-gameresults">
+				<p>More</p>
+			</div>
+		</article>';	
 	}
 ?>

@@ -10,7 +10,7 @@
 	<hr>
 	<!--Opphavsrett og andre info-->	
 	<p> Sist oppdatert: 22.01.2018. </p>
-	<p> Nettsiden er laget av Sarmad Abbas.</p>
+	<p> Developed by virusoftware | <a href="http://www.virusoftware.com">www.virusoftware.com</a></p>
 	<p> Innholdet i denne nettsiden er beskyttet i henhold til norsk lov om opphavsrett (Åndsverkloven). </p>
 	<small id="copyright-text">&copy; 2016 - <?php echo date('Y'); ?> TechWizzle</small>
 </footer> 

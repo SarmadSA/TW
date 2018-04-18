@@ -39,3 +39,12 @@ footer p, #copyright-text{
     font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
     color: rgba(255,255,255,0.60);
 }
+
+footer a{
+	transition: 0.3s ease;
+	color: gray; /*or rgba(22,156,81,1.00);*/
+}
+
+footer a:hover{
+	color: rgba(23,217,108,1.00);
+}

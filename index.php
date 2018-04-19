@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/productProfileStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/footerStyles.css">
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Saira+Condensed" rel="stylesheet">
 </head>
 <body>
 	<?php include 'templates/header.php';?>

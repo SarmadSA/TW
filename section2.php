@@ -49,9 +49,9 @@
 						</div>
 					</div>
 				</div>
-		<?php } ?>
+		<?php } //empadded loop closing tag ?>
 			<div class="more-gameresults">
 				<p>More</p>
 			</div>
 		</article>	
-	<?php } ?>
+	<?php } //main loop closing tag ?>

@@ -11,6 +11,6 @@
 	<!--Opphavsrett og andre info-->	
 	<p> Sist oppdatert: 22.01.2018. </p>
 	<p> Developed by virusoftware | <a href="http://www.virusoftware.com">www.virusoftware.com</a></p>
-	<p> Innholdet i denne nettsiden er beskyttet i henhold til norsk lov om opphavsrett (Åndsverkloven). </p>
+	<p> By using this site, you agree to have read and accepted the terms of use, cookie and privacy policy. </p>
 	<small id="copyright-text">&copy; 2016 - <?php echo date('Y'); ?> TechWizzle</small>
 </footer> 

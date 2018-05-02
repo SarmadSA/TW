@@ -36,7 +36,7 @@ footer hr{
 
 footer p, #copyright-text{
     font-size: 80%;
-    /*font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";*/
+    font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
     color: rgba(255,255,255,0.60);
 }
 

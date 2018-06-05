@@ -37,12 +37,6 @@
 			<?php include 'section2.php';?>
 		</section>
 		
-		<!--add section name here-->
-		<section>
-			<h2 class="section-to-tittle-container">CPU comparisons</h2>
-			<?php include 'section3.php'?>
-		</section>
-		
 		<br class="clear"/>
 	</main>
 	

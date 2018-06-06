@@ -1,15 +1,17 @@
 .product-profile{
-    box-sizing: border-box;
     float: left;
-    width: 32.4%;
+    width: 31%;
     min-height: 550px;
-    margin-left: 10px;
+    margin-right: 1%;
+    margin-left: 1%;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     background-color: whitesmoke;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0px rgba(0, 0, 0, 0.19);
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     border-top: 2px solid green;
 }
 
@@ -20,10 +22,9 @@
 }
 
 .profile-header-container{
-    box-sizing: border-box;
     padding: 10px;
     width:100%;
-    height: 130px;
+    height: 140px;
     /*border-bottom: 1px solid gray;*/
     margin-bottom: 30px;
     margin-top: 20px;
@@ -47,12 +48,14 @@
     color: green;
     cursor: pointer;
     margin-top: 10px;
+    transition: 0.2s ease;
+}
+
+.view-profile:hover {
+    color: #04b849;
 }
 
 .game-showcase{
-    box-sizing: border-box;
-    float: left;
-    background-color: transparent;
     height: 90px;
     margin-left: 20px;
     margin-right: 20px;
@@ -71,31 +74,10 @@
 
 .game-results{
     padding: 5px;
-    font-size: 120%;
-}
-
-.profile-view-more{
-    box-sizing: border-box;
-    float: left;
-    background-color:#26b27b;
-    max-height: 90px;
-    width: 50%;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    transition: 0.6s ease;
-    font-size: 110%;   
-}
-
-.profile-view-more:hover{
-    cursor: pointer;
-    background-color:#26e8a0;
+    font-size: 110%;
 }
 
 /*.fps-container{
-    box-sizing: border-box;
     float: right;
     position: relative;
     height: 70px;
@@ -107,9 +89,8 @@
 
 .game-results-container{
     float:left;
-    background-color: transparent;
     width: 200px;
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 .hexagon {
@@ -122,16 +103,11 @@
     color:#70e75c;
 }
 
-.hexagon p{
-    text-align: center;
-}
-
 .hexagon-score{
-    box-sizing: border-box;
     position: absolute;
     z-index: 1000;
     width: 100%;
-    top: -12%;
+    top: -20%;
     text-align: center;
     color: #70e75c;
     height: 50px;
@@ -161,10 +137,8 @@
 
 .more-gameresults{
 	float: left;
-    height: 50px;
+    height: 67px;
     width: 100%;
-    background-color: transparent;
-    margin-left: auto;
     padding-top: 15px;
     text-align: center;
     font-size: 120%;
@@ -175,6 +149,100 @@
 }
 
 .more-gameresults:hover{
-	background-color: rgba(22,156,81,1.00); /*rgba(5,154,55,0.70);*/
+	background-color: rgb(22, 156, 51); /*rgba(5,154,55,0.70);*/
     color: white;
 }
+
+@media only screen and (max-width: 1400px) {
+    .product-profile {
+        width: 46%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .product-profile {
+        width: 95%;
+    }
+}
+
+
+/*
+@media only screen and (max-width: 1910px) {
+    .product-profile {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (max-width: 1500px) {
+    .product-profile {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+    .product-profile {
+        width: 48%;
+    }
+
+    .game-showcase{
+        height: 90px;
+        margin-left:5px;
+        margin-right: 5px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+    .hexagon-score{
+        font-size: 105%;
+    }
+
+    .hexagon {
+        width: 50px; 
+        height: 28.87px;
+      }
+      
+    .hexagon:before,
+    .hexagon:after {
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+      }
+}
+
+@media only screen and (max-width: 1090px) {
+    .product-profile {
+        width: 80%;
+    }
+    .game-showcase{
+        height: 90px;
+        margin-left:20px;
+        margin-right: 20px;
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .hexagon {
+        width: 60px; 
+        height: 34.64px;
+      }
+      
+    .hexagon:before,
+    .hexagon:after {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+      }
+
+    .hexagon-score{
+        font-size: 120%;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+    .product-profile {
+        width: 410px;
+    }
+}
+*/

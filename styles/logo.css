@@ -1,0 +1,31 @@
+.logo-container{
+    display: inline;
+}
+
+.logo-text{
+    display: inline;
+    font-size: 200%;
+}
+
+.logo-text{
+    transition: 0.4s ease;
+    color: rgba(191,191,191,1.00);
+}
+
+.svg-logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+.svg-logo .cls-1{
+    transition: 0.4s ease;
+    fill: #00FF00;
+}
+
+/*when hovering over the logo-container, we are effecting the logo text and the 2 parts of svg logo*/
+.logo-container:hover .logo-text,
+.logo-container:hover 
+.svg-logo .cls-1{
+    color: white;
+    fill: white;
+}

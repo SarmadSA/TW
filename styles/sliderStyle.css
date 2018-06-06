@@ -1,28 +1,11 @@
 @charset "utf-8";
 
-#headerDiv{
-    box-sizing: border-box;
-    background-color: transparent;
-    width: 73.4%;
-    height: 361px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
 .sliderDiv {
-    width: 99%;
-    height: 410px;
+    float: left;
+    width: 73.4%;
+    height: 400px;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top: 5px; /*sinse the header div is 430px and .sliderDiv is 400px there will be 30px left, we divide them by 2 så we get 15px top and the rest (15px) buttom*/
-}
-
-.slides {
-    display: none;
-    height: 350px;
-    width: 100%;
+    margin-bottom: 30px;
 }
 
 .slideImage{
@@ -41,7 +24,7 @@ images you upload should be the same size of the container, see .sliderDiv*/
 /* Next and previous buttons */
 .slideButton{
     border-radius: 40px;   	/*border-radius: 0 3px 3px 0; use this if you want rectangle insted of sircle*/
-    border: 0px;
+    border: 0;
     height: 40px;
     width: 40px;
     outline: none;
@@ -82,9 +65,10 @@ images you upload should be the same size of the container, see .sliderDiv*/
     transition: 0.5s ease;
 }
 
-.previewsSlide, .nextSlide {
+.previewsSlide, 
+.nextSlide {
     position: absolute;
-    top: 40%;
+    top: 49%;
     width: auto;
     padding: 16px;
     margin-top: -22px;
@@ -104,19 +88,14 @@ images you upload should be the same size of the container, see .sliderDiv*/
 /* Slider text */
 .slideText {
     background-color: rgba(0,0,0,0.15);
-    color: #f2f2f2; 						/*Text color*/
+    color: #f2f2f2; 					
     font-size: 15px;
     margin-left: 10px;
     margin-top: 10px;
-    padding-top: 8px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 8px;
+    padding: 8px 10px;
     position: absolute;
     max-width: 40%;
     max-height: 40%;
-    width: auto;
-    height: auto;
     cursor: pointer;
 }
 
@@ -153,4 +132,42 @@ images you upload should be the same size of the container, see .sliderDiv*/
 @keyframes fadeOut {
     0% {opacity: .5} 
     100% {opacity: 1}
+}
+
+@media only screen and (max-width: 1400px) {
+    .sliderDiv {
+        height: 350px;
+    }
+    .slides{
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .sliderDiv {
+        height: 300px;
+    }
+    .slides{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .sliderDiv {
+        height: 250px;
+        width: 100%;
+    }
+    .slides{
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .sliderDiv {
+        height: 200px;
+        width: 100%;
+    }
+    .slides{
+        height: 200px;
+    }
 }

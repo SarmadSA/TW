@@ -3,7 +3,9 @@ var slidesArray = document.getElementsByClassName("slides");
 var bubbleArray = document.getElementsByClassName("bubble");
 
 displaySelectedSlide(currentSlideNumber); // runs at the start only
-autoSlider(10000);// auto slider, repeats every 10 seconds (maybe not good for prefomance, uses unnessery server resurses? remove it?)
+autoSlider(10000);// auto slider, repeats every 10 seconds
+
+
 
 function increaseSlide(){
 	"use strict";

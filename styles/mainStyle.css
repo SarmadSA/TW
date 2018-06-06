@@ -45,18 +45,19 @@ a{
     .main {
         width: 1000px;
     }
-    /*remove the "get latest updates div" and let slider*/
 }
 
+/*phone tablet optimazation*/
 @media only screen and (max-width: 1000px) {
     .main {
-        width: 600px;
+        width: 900px;
     }
 }
 
+/*
 @media only screen and (max-width: 800px) {
-    .main {
+   .main {
         width: 500px;
     }
-    /*remove slider and let "get latest updates div"*/
 }
+*/

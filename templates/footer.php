@@ -1,5 +1,5 @@
 <footer id="footer">
-    <a href="index.php#home-section">
+    <a href="../techwizzle/index.php">
         <div class="logo-container">
             <!--SVG logo-->
             <?php include'techwizzle-logo.svg'; ?>
@@ -15,11 +15,11 @@
     </div>
     <nav id="footer-nav">
         <ul id="footer-ul">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Software</a></li>
-            <li><a href="#">About</a></li>
-            <li class="contact"><a href="contact.php#main">Contact</a></li>
-            <li><a href="#">Other websites</a></li>
+            <li><a href="../techwizzle/index.php">Home</a></li>
+            <li><a href="../techwizzle/profiles.php">Profiles</a></li>
+            <li><a href="../techwizzle/about.php">About</a></li>
+            <li><a href="../techwizzle/contact.php">Contact</a></li>
+            <li><a href="http://www.virusoftware.com" target="_blank">Other websites</a></li>
         </ul>
     </nav>
     <p id="development-info"> By using this site, you agree to have read and accepted the <a href="#">terms of use</a>, <a href="#">cookie</a> and <a href="#">privacy policy. </a></p>

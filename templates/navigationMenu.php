@@ -1,6 +1,6 @@
 <nav id="nav-menu" class="nav-menu">
     <!--Logo container-->
-    <a href="index.php#home-section">
+    <a href="../techwizzle/index.php">
         <div class="logo-container">
             <!--SVG logo-->
             <?php include'techwizzle-logo.svg';?>
@@ -9,9 +9,9 @@
         </div>
     </a>   
 	<ul id="navigation-ul">
-		<li class="list-element"><a href="#">Profiles</a></li>
-		<li class="list-element"><a href="#">Compare</a></li>
-		<li class="list-element"><a href="#">About</a></li> 
-		<li class="list-element"><a href="../techWizzle/pages/contact.php">Contact us</a></li> 
+		<li class="list-element"><a href="../techwizzle/profiles.php">Profiles</a></li>
+		<li class="list-element"><a href="../techwizzle/profiles.php">Compare</a></li>
+		<li class="list-element"><a href="../techwizzle/about.php">About</a></li> 
+		<li class="list-element"><a href="../techwizzle/contact.php">Contact us</a></li> 
 	</ul>
 </nav>

@@ -1,39 +1,44 @@
 <!doctype html>
 <html lang="nb">
 <head>
+	<link rel="shortcut icon" href="images/techwizzle-icon.png">
 	<meta charset="utf-8">
 	<title>TechWizzle</title>
 	<link rel="stylesheet" type="text/css" href="styles/mainStyle.css">
-	<link rel="stylesheet" type="text/css" href="styles/headerStyle.css">
+	<link rel="stylesheet" type="text/css" href="styles/footer.css">
+	<link rel="stylesheet" type="text/css" href="styles/logo.css">
+	<link rel="stylesheet" type="text/css" href="styles/form.css">
+	<link rel="stylesheet" type="text/css" href="styles/header.css">
 	<link rel="stylesheet" type="text/css" href="styles/sliderStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/navigationMenueStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/searchBarStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/contentStyle.css">
 	<link rel="stylesheet" type="text/css" href="styles/productProfileStyle.css">
-	<link rel="stylesheet" type="text/css" href="styles/footerStyles.css">
-	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Abel|Saira+Condensed" rel="stylesheet">
 </head>
 <body>
-	<?php include 'templates/header.php';?>
-	<?php include 'templates/navigationMenu.php';?>
-	<main class="container">   
+	<header><?php include 'templates/navigationMenu.php';?></header>
+	<main class="main">
+		<?php include 'templates/slider.php';?>  
 		<aside>
-			<h2>Build of the week</h2>
+			<h2>Get the latest updates</h2>
 			<br>
+			<?php include 'templates/subscribeForm.php';?>  
 		</aside>
 
 		<section>
-			<div class="section-tittle-container">
-				<h2 class="top-section-tittle">Siste Artikler:</h2>
+			<div class="section-tittle-box">
+				<h2 class="profile-section-tittle">Featured Product Profiles</h2>
 			</div>
-			<?php include 'templates/slider.php';?>
-			<?php include 'section1.php';?>
+			<?php include 'section2.php';?>
 		</section>
 
 		<!--Product profiles section-->
 		<section>
-			<h2 class="section-to-tittle-container">Featured Product Profiles</h2>
+			<div class="section-tittle-box">
+				<h2 class="profile-section-tittle">New Product Profiles</h2>
+			</div>
+			<?php include 'section2.php';?>
 			<?php include 'section2.php';?>
 		</section>
 		

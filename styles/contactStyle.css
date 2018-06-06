@@ -8,6 +8,10 @@
 	background-color: transparent;
 }
 
+.page-tittle{
+	padding: 0 30px;
+}
+
 .form-input {
 	font-family: 'Nanum Gothic', sans-serif;
 	box-sizing: border-box;

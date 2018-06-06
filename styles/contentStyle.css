@@ -75,15 +75,33 @@ section img{
     color: rgb(28, 145, 38);
 }
 
+.about-section{
+    float: left;
+    width: 70%;
+    min-height: 220px;
+    height: 400px;
+    padding: 30px;
+    background-color: rgba(230,230,230,1);
+    font-size: 120%;
+}
+
 @media only screen and (max-width: 1400px) {
     aside{
         height: 350px;
+    }
+    .about-section{
+        height: 350px;
+        font-size: 110%;
     }
 }
 
 @media only screen and (max-width: 1200px) {
     aside{
         height: 300px;
+    }
+    .about-section{
+        height: 300px;
+        font-size: 100%;
     }
 }
 
@@ -93,11 +111,15 @@ section img{
         clear: both;
         width: 100%;
     }
+    .about-section{
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     aside{
-        height: 220px;
+        height: 250px;
         clear: both;
         width: 100%;
     }

@@ -1,0 +1,29 @@
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    padding: 15px 100px;
+    background-color: black;
+    z-index: 10000;
+    border-bottom: 2px solid #22B473;
+}
+
+#navigation-ul {
+    transition: 0.4s ease;
+    float: right;
+    font-size: 130%;
+    margin-top: 10px;
+}
+
+.list-element {
+    display: inline;
+    padding: 0 15px;
+}
+
+.list-element a{
+    transition: 0.4s ease;
+    color: white;
+}
+
+.list-element a:hover{
+    color: #00FF00;
+}

@@ -1,16 +1,28 @@
-<footer>
-	<nav>
-		<ul>
-			<li><a href="../techWizzle/pages/contact.php">Contact us</a></li>
-			<li><a href="annonser.html">Annonser</a></li>
-			<li><a href="apper.html#">Tech Apper</a></li>
-			<li><a href="hosting.html">Hosting løsninger</a></li>
-		</ul>
-	</nav>  
-	<hr>
-	<!--Opphavsrett og andre info-->	
-	<p> Sist oppdatert: 22.01.2018. </p>
-	<p> Developed by virusoftware | <a href="http://www.virusoftware.com">www.virusoftware.com</a></p>
-	<p> By using this site, you agree to have read and accepted the terms of use, cookie and privacy policy. </p>
-	<small id="copyright-text">&copy; 2016 - <?php echo date('Y'); ?> TechWizzle</small>
-</footer> 
+<footer id="footer">
+    <a href="index.php#home-section">
+        <div class="logo-container">
+            <!--SVG logo-->
+            <?php include'techwizzle-logo.svg'; ?>
+            <!--Logo text-->
+            <h1 class="logo-text">TechWizzle</h1>
+        </div>
+    </a>
+    <div class="social-media-container">
+        <a href="#"><?php include'twitter.svg'; ?></a>
+        <a href="#"><?php include'facebook.svg'; ?></a>
+        <a href="#"><?php include'google-plus.svg'; ?></a>
+        <a href="#"><?php include'youtube.svg'; ?></a>
+    </div>
+    <nav id="footer-nav">
+        <ul id="footer-ul">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Software</a></li>
+            <li><a href="#">About</a></li>
+            <li class="contact"><a href="contact.php#main">Contact</a></li>
+            <li><a href="#">Other websites</a></li>
+        </ul>
+    </nav>
+    <p id="development-info"> By using this site, you agree to have read and accepted the <a href="#">terms of use</a>, <a href="#">cookie</a> and <a href="#">privacy policy. </a></p>
+    <p id="development-info"> Developed by virusoftware | <a href="http://www.virusoftware.com">www.virusoftware.com</a></p>
+    <small id="copyright-text">&copy; 2016 - <?php echo date('Y'); ?> TechWizzle</small>
+</footer>

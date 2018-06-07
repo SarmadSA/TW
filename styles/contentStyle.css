@@ -83,6 +83,7 @@ section img{
     padding: 30px;
     background-color: rgba(230,230,230,1);
     font-size: 120%;
+    box-shadow: 0px 6px 37px -11px rgba(0,0,0,0.83);
 }
 
 @media only screen and (max-width: 1400px) {

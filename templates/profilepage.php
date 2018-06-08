@@ -23,6 +23,33 @@
 
         <section class="profile-section">
 
+            <div class="profile-header-container">
+                <figure class="profile-image-container">
+                    <img src="<?php echo $directory . $productImageArray[$j];?>" alt="GPU name image"/> 
+                </figure>
+                <div class="product-info-container">
+                    <h1 class="profile-tittle"><?php echo "product name"; ?></h1>
+                    <p>Date of release: <?php echo "date of release"; ?></p>
+                    <p>AVG price: <?php echo "price" ?> USD</p>
+                    <p>Product link</p>
+                    <p class="view-profile">Product link</p>
+                </div>
+            </div>
+
+            <div class="technical-info-box">
+                <h3>Technical information:</h3>
+                <br>
+                <ul>
+                    <p>CUDA Cores: </p>
+                    <p>Graphics Clock (MHz): </p>
+                    <p>Processor Clock (MHz): </p>
+                    <p>Standard Memory Config: </p>
+                    <p>Memory Interface: </p>
+                    <p>Memory Interface Width: </p>
+                    <p>Memory Bandwidth (GB/sec): </p>
+                </ul>
+            </div>
+
         </section>
 
 		<aside>

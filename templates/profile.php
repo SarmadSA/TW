@@ -25,7 +25,7 @@
             <p>Date of release: <?php echo $productReleaseDate; ?></p>
             <p>AVG price: <?php echo $priceArray[$j]; ?> USD</p>
             <p>Product link</p>
-            <p class="view-profile">View full profile</p>
+            <a href="#" class="view-profile">View full profile</a>
         </div>
     </div>
 

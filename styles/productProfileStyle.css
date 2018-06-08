@@ -47,12 +47,14 @@
 .view-profile{
     color: green;
     cursor: pointer;
+    display: inline-block;
     margin-top: 10px;
     transition: 0.2s ease;
 }
 
 .view-profile:hover {
     color: #04b849;
+    text-decoration: underline;
 }
 
 .game-showcase{

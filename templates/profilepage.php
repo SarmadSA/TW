@@ -10,7 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="../styles/form.css">
 	<link rel="stylesheet" type="text/css" href="../styles/header.css">
 	<link rel="stylesheet" type="text/css" href="../styles/sliderStyle.css">
-	<link rel="stylesheet" type="text/css" href="../styles/navigationMenueStyle.css">
 	<link rel="stylesheet" type="text/css" href="../styles/searchBarStyle.css">
 	<link rel="stylesheet" type="text/css" href="../styles/contentStyle.css">
 	<link rel="stylesheet" type="text/css" href="../styles/productProfileStyle.css">
@@ -31,8 +30,8 @@
                     <h1 class="profile-tittle"><?php echo "product name"; ?></h1>
                     <p>Date of release: <?php echo "date of release"; ?></p>
                     <p>AVG price: <?php echo "price" ?> USD</p>
-                    <p>Product link</p>
-                    <p class="view-profile">Product link</p>
+                    <a>Product link</a>
+                    <a herf="#" class="view-profile">Product link</a>
                 </div>
             </div>
 
